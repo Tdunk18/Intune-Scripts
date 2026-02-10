@@ -4,7 +4,7 @@ This repository contains useful Intune scripts for Hybrid and Entra Join Migrati
 
 ## 1. Authentication and Permissions
 
-- **Azure AD Authentication**: Scripts should implement Azure AD authentication for secure access to Microsoft Graph and Intune APIs via modules like Microsoft.Graph.Intune.
+- **Azure AD Authentication**: Scripts should implement Azure AD authentication for secure access to Microsoft Graph and Intune APIs via the Microsoft.Graph PowerShell module (the legacy Microsoft.Graph.Intune module is deprecated).
 - **Delegated Permissions**: Verify that proper user delegated permissions are in place for the Intune service.
 - **MFA Compliance**: Ensure compatibility with multi-factor authentication (MFA).
 - **Token Caching**: Optionally provide token caching for session persistence.
@@ -17,9 +17,9 @@ This repository contains useful Intune scripts for Hybrid and Entra Join Migrati
 - **Logging and Auditing**:
   - Write detailed logs (with timestamps) to help trace script execution and facilitate debugging.
   - Ensure sensitive information (e.g., tokens, PII, credentials) is not logged.
-  - Ensure two sets of logs are created: portable logs that follow the execution of the script and a separate location that's collected by Intune's collect diagnostics system.
+  - Ensure two sets of logs are created: local logs in the script's directory for immediate troubleshooting and logs in Intune's diagnostics directory (e.g., C:\ProgramData\Microsoft\IntuneManagementExtension\Logs) that can be collected by Intune's collect diagnostics system.
   - Ensure logs always default to verbose logging and use the file name of the script as its log file name.
-  - Ensure logs always overwrite the old log files or amend them to prevent log file creep.
+  - Implement log rotation to prevent log file creep: append to log files with timestamps for each execution, and implement a retention policy (e.g., keep last 30 days or last 10MB) with automatic cleanup of old entries.
 - **Output Standardization**: Provide uniform outputs such as CSV or JSON that users can parse for further use.
 
 ## 3. Device and Policy Management
