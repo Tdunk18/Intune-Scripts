@@ -1,0 +1,54 @@
+# PowerShell
+*.ps1xml
+
+# Reports and Outputs
+Reports/
+Rollback/
+Backups/
+*.json
+*.csv
+*.html
+!Examples/*.ps1
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Package files
+*.nupkg
+*.snupkg
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
