@@ -19,7 +19,7 @@ This repository contains useful Intune scripts for Hybrid and Entra Join Migrati
   - Ensure sensitive information (e.g., tokens, PII, credentials) is not logged.
   - Ensure two sets of logs are created: local logs in the script's directory for immediate troubleshooting and logs in Intune's diagnostics directory (e.g., C:\ProgramData\Microsoft\IntuneManagementExtension\Logs) that can be collected by Intune's collect diagnostics system.
   - Ensure logs always default to verbose logging and use the file name of the script as its log file name.
-  - Implement log rotation to prevent log file creep: append to log files with timestamps for each execution, and implement a retention policy (e.g., keep last 30 days or last 10MB) with automatic cleanup of old entries.
+  - Implement log rotation to prevent log file creep: append to log files with timestamps for each execution, and implement a retention policy (e.g., keep logs for up to 30 days AND limit total size to 10MB, whichever limit is reached first) with automatic cleanup of old entries.
 - **Output Standardization**: Provide uniform outputs such as CSV or JSON that users can parse for further use.
 
 ## 3. Device and Policy Management
@@ -43,7 +43,7 @@ This repository contains useful Intune scripts for Hybrid and Entra Join Migrati
 
 - **Microsoft Graph Support**: Use Microsoft Graph API for interacting with Intune, leveraging the Microsoft.Graph PowerShell module.
 - **OData Querying**: Implement OData querying for fetching filtered data efficiently (e.g., $filter, $expand, $select).
-- **Rate Limiting and Retries**: Handle Graph API throttling by including retry logic with exponential backoff.
+- **Rate Limiting and Retries**: Handle Graph API throttling by including retry logic with exponential backoff (recommended: maximum 5 retry attempts with backoff starting at 1 second and doubling each time, e.g., 1s, 2s, 4s, 8s, 16s).
 
 ## 6. Ease of Use and Customization
 
