@@ -86,7 +86,7 @@ This document outlines the requirements and standards that all scripts in this r
 .NOTES
     Version: 1.0.0
     Author: Your Name
-    Date: YYYY-MM-DD
+    Date: yyyy-MM-dd
     
     Required Permissions:
     - DeviceManagementConfiguration.ReadWrite.All
