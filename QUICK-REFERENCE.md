@@ -50,7 +50,25 @@ This guide helps you quickly find the right location for your scripts.
 → `GraphAPI/Policy-Management/`
 
 ### Generate reports and analytics
-→ `GraphAPI/Reporting/`
+→ `GraphAPI/Reporting/` (for Graph API-based reports)
+
+### Generate compliance reports
+→ `Reporting/Compliance-Reports/`
+
+### Generate device inventory reports
+→ `Reporting/Device-Reports/`
+
+### Generate user reports
+→ `Reporting/User-Reports/`
+
+### Generate application reports
+→ `Reporting/Application-Reports/`
+
+### Generate security reports
+→ `Reporting/Security-Reports/`
+
+### Create custom or executive reports
+→ `Reporting/Custom-Reports/`
 
 ### Remove stale devices or unused resources
 → `Maintenance/Cleanup/`
@@ -76,7 +94,8 @@ This guide helps you quickly find the right location for your scripts.
 ### Already Using Intune?
 1. Check `Cloud/` folders for management scripts
 2. Use `GraphAPI/` for programmatic operations
-3. Implement `Maintenance/` for ongoing optimization
+3. Use `Reporting/` for comprehensive reports
+4. Implement `Maintenance/` for ongoing optimization
 
 ### Hybrid Environment?
 1. Use `On-Premises/` for on-prem infrastructure

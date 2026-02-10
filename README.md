@@ -44,6 +44,15 @@ Scripts for ongoing maintenance and optimization.
 - **Audit**: Change tracking, access reviews, security baselines
 - **Optimization**: Policy consolidation, performance tuning, cost optimization
 
+### 📁 Reporting
+Scripts for comprehensive reporting across Intune and Azure environments.
+- **Compliance-Reports**: Device and policy compliance tracking
+- **Device-Reports**: Complete device inventory and health status
+- **User-Reports**: User device assignments, licenses, adoption
+- **Application-Reports**: App deployment status and usage analytics
+- **Security-Reports**: Security posture, threats, encryption status
+- **Custom-Reports**: Executive dashboards and custom KPIs
+
 ## Getting Started
 
 1. **Assess Your Environment**: Start with scripts in `Migration/Pre-Migration`
