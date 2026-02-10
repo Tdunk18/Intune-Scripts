@@ -24,10 +24,13 @@
     PowerShellVersion = '5.1'
 
     # Modules that must be imported into the global environment prior to importing this module
-    RequiredModules = @(
-        @{ModuleName = 'Microsoft.Graph.Authentication'; ModuleVersion = '2.0.0'; Guid = '883916f2-9184-46ee-b1f8-b6a2fb784cee'},
-        @{ModuleName = 'Microsoft.Graph.DeviceManagement'; ModuleVersion = '2.0.0'; Guid = '2d3b6d88-7e1b-4e5e-8b5e-3e5e5e5e5e5e'}
-    )
+    # Note: These are required for production use. Install with:
+    # Install-Module -Name Microsoft.Graph.Authentication -MinimumVersion 2.0.0
+    # Install-Module -Name Microsoft.Graph.DeviceManagement -MinimumVersion 2.0.0
+    # RequiredModules = @(
+    #     @{ModuleName = 'Microsoft.Graph.Authentication'; ModuleVersion = '2.0.0'},
+    #     @{ModuleName = 'Microsoft.Graph.DeviceManagement'; ModuleVersion = '2.0.0'}
+    # )
 
     # Functions to export from this module
     FunctionsToExport = @(
