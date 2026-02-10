@@ -492,6 +492,7 @@ function Write-Log {
   ```powershell
   $totalDevices = $devices.Count
   $processed = 0
+  $script:currentIndex = 0
   
   foreach ($batch in ($devices | Group-Object -Property {[math]::Floor($script:currentIndex++ / $BatchSize)})) {
       # Process batch
