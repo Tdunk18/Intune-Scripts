@@ -1,0 +1,30 @@
+# Security Workspace - Git Ignore
+
+# Logs directory
+SecurityWorkspace/Logs/*.log
+SecurityWorkspace/Logs/**
+
+# Reports directory (may contain sensitive data)
+SecurityWorkspace/Reports/*.html
+SecurityWorkspace/Reports/*.json
+SecurityWorkspace/Reports/*.csv
+SecurityWorkspace/Reports/Quarantine/**
+
+# Temporary files
+*.tmp
+*.temp
+
+# PowerShell module cache
+*.psm1.cache
+
+# Test artifacts
+test-results/
+*.test.log
+
+# User-specific configuration overrides
+SecurityWorkspace/Config/*.local.yaml
+SecurityWorkspace/Config/*.override.yaml
+
+# Sensitive data files
+*.secret
+*.credentials
